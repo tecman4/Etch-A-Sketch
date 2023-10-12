@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-const body = document.querySelector('body');
-let pixels=8;
+const p = document.querySelector('p');
+let pixels=32;
 var root = document.querySelector(':root');
 root.style.setProperty('--pixels', '8');
 
@@ -8,7 +8,7 @@ for(let i=0;i<pixels;i++){
   const column = document.createElement('column');
   column.textContent = '';
   column.style.backgroundColor = getRandomColor();
-  body.appendChild(column);
+  p.appendChild(column);
   column.addEventListener('mouseover', function() {
     column.style.backgroundColor = getRandomColor();
   });
